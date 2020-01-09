@@ -1,10 +1,11 @@
-package com.deloitte.estore.model;
+package com.deloitte.estore.controller;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.deloitte.estore.model.Product;
 import com.deloitte.estore.service.ProductService;
 import com.deloitte.estore.service.ProductServiceImpl;
 
@@ -23,7 +24,7 @@ public class AddProductController extends HttpServlet {
 		try {
 			if(ps.addProduct(p1))
 			{
-				res.sendRedirect("success.jsp");
+				res.sendRedirect("getall");
 			}
 			else
 			{
